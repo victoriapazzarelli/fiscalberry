@@ -69,6 +69,68 @@
             height: 40
             on_text: app.store_new_host(self.text)
 
+        # Sección de Drivers de Impresoras
+        Label:
+            text: "Drivers de Impresoras"
+            font_size: 20
+            bold: True
+            size_hint_y: None
+            height: 40
+            color: 0, 0, 128, 1
+
+        ScrollView:
+            size_hint_y: None
+            height: 300
+            do_scroll_x: False
+            do_scroll_y: True
+            
+            GridLayout:
+                cols: 1
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 5
+                padding: 10
+                
+                Button:
+                    text: "Sam4S Giant - 100"
+                    size_hint_y: None
+                    height: 50
+                    background_color: 0.2, 0.6, 0.9, 1
+                    color: 1, 1, 1, 1
+                    on_press: app.root.get_screen('main').open_sam4s_driver()
+                
+                Button:
+                    text: "Citizen CT-S310II"
+                    size_hint_y: None
+                    height: 50
+                    background_color: 0.2, 0.6, 0.9, 1
+                    color: 1, 1, 1, 1
+                    on_press: app.root.get_screen('main').open_citizen_driver()
+                
+                Button:
+                    text: "Epson TM-T20"
+                    size_hint_y: None
+                    height: 50
+                    background_color: 0.2, 0.6, 0.9, 1
+                    color: 1, 1, 1, 1
+                    on_press: app.root.get_screen('main').open_epson_tm20_driver()
+                
+                Button:
+                    text: "Drivers Genéricos POS"
+                    size_hint_y: None
+                    height: 50
+                    background_color: 0.2, 0.6, 0.9, 1
+                    color: 1, 1, 1, 1
+                    on_press: app.root.get_screen('main').open_generic_pos_driver()
+                
+                Button:
+                    text: "Epson TM-T88V"
+                    size_hint_y: None
+                    height: 50
+                    background_color: 0.2, 0.6, 0.9, 1
+                    color: 1, 1, 1, 1
+                    on_press: app.root.get_screen('main').open_epson_tm88v_driver()
+
        
 
 <LogWidget>:
